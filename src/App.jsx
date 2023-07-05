@@ -1,10 +1,25 @@
-import Main from './pages/Main'
+import Index from './pages/Index';
+import Login from './pages/Login';
+import ForgotPassword from './pages/ForgotPassword';
+import Register from './pages/Register';
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
 
 function App() {
-
   return (
-    <Main />
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/forgotpassword" element={<ForgotPassword/>}/>
+        <Route path="/register" element={<Register/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
